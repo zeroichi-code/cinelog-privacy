@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>プライバシーポリシー | シネログ</title>
+<style>
+  :root {
+    --paper: #f8f5f4;
+    --paper-raised: #ffffff;
+    --ink: #241a1c;
+    --ink-soft: #6a5c5f;
+    --ink-faint: #8f8184;
+    --accent: #c8414b;
+    --accent-ink: #9b2c36;
+    --accent-soft: #f8e1e3;
+    --line: #eadcdd;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #15151f;
+      --paper-raised: #1e1e2c;
+      --ink: #f3f0e8;
+      --ink-soft: #a9a6b8;
+      --ink-faint: #7f7c90;
+      --accent: #e8b04b;
+      --accent-ink: #f0c878;
+      --accent-soft: #2f2430;
+      --line: #34344a;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic UI",
+      "Noto Sans JP", "Meiryo", system-ui, sans-serif;
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem;
+  }
+
+  .masthead {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .mark {
+    width: 52px;
+    height: 52px;
+    border-radius: 15px;
+    background: var(--accent);
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+  }
+
+  .masthead-text .eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--accent-ink);
+    text-transform: uppercase;
+  }
+
+  .masthead-text h1 {
+    margin: 0.15rem 0 0;
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 0.01em;
+  }
+
+  .lede {
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 1.25rem 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .lede dl {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.35rem 1.25rem;
+  }
+
+  .lede dt {
+    color: var(--ink-faint);
+    font-weight: 500;
+  }
+
+  .lede dd {
+    margin: 0;
+  }
+
+  .intro {
+    margin: 2rem 0 3rem;
+    color: var(--ink-soft);
+    font-size: 1rem;
+    max-width: 62ch;
+  }
+
+  .notice {
+    margin: 0 0 3rem;
+    padding: 1.1rem 1.4rem;
+    background: var(--accent-soft);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    color: var(--ink);
+    font-size: 0.92rem;
+  }
+
+  .notice strong { color: var(--accent-ink); }
+
+  section {
+    margin-bottom: 2.75rem;
+  }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-num {
+    font-variant-numeric: tabular-nums;
+    font-weight: 900;
+    font-size: 0.95rem;
+    color: var(--accent-ink);
+    background: var(--accent-soft);
+    border-radius: 8px;
+    width: 2rem;
+    height: 2rem;
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 800;
+    text-wrap: balance;
+  }
+
+  section > p, section > ul, section > table {
+    margin-left: 2.85rem;
+  }
+
+  p {
+    margin: 0 0 0.9rem;
+    max-width: 66ch;
+  }
+
+  ul {
+    margin: 0 0 0.9rem;
+    padding-left: 1.1rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+    max-width: 62ch;
+  }
+
+  li:last-child { margin-bottom: 0; }
+
+  .datatable {
+    width: calc(100% - 2.85rem);
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .datatable th,
+  .datatable td {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+
+  .datatable tr:last-child td { border-bottom: none; }
+
+  .datatable th {
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+    font-weight: 700;
+    width: 34%;
+  }
+
+  .table-wrap {
+    margin-left: 2.85rem;
+    overflow-x: auto;
+  }
+
+  .table-wrap .datatable { width: 100%; margin-left: 0; }
+
+  a {
+    color: var(--accent-ink);
+    text-decoration-color: var(--accent);
+    text-underline-offset: 3px;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .contact-card {
+    margin: 3rem 0 0;
+    padding: 1.5rem;
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+  }
+
+  .contact-card h2 {
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .contact-card p { margin-bottom: 0.4rem; }
+
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    color: var(--ink-faint);
+    font-size: 0.82rem;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="masthead">
+    <div class="mark" aria-hidden="true">🎬</div>
+    <div class="masthead-text">
+      <div class="eyebrow">Privacy Policy</div>
+      <h1>シネログ プライバシーポリシー</h1>
+    </div>
+  </div>
+
+  <div class="lede">
+    <dl>
+      <dt>制定日</dt><dd>2026年10月3日</dd>
+      <dt>最終改定日</dt><dd>2026年10月3日</dd>
+      <dt>運営者</dt><dd>ゼロイチ（個人開発）</dd>
+      <dt>連絡先</dt><dd>clockworkorange1019+cinelog@gmail.com</dd>
+    </dl>
+  </div>
+
+  <p class="intro">
+    「シネログ」（以下「本アプリ」）は、観た映画の感想・評価・観た場所などを記録するためのアプリケーションです。本ポリシーは、本アプリの利用にあたって取得・利用する情報について説明するものです。本アプリをご利用いただくことで、本ポリシーに同意いただいたものとみなします。
+  </p>
+
+  <div class="notice">
+    <strong>記録した内容は、お使いの端末の中にだけ保存されます。</strong>感想・評価・写真などを当方のサーバーに送信することはありません。
+  </div>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">1</span>
+      <h2>アカウント登録について</h2>
+    </div>
+    <p>
+      本アプリはユーザー登録・ログイン機能を持ちません。氏名・メールアドレス・電話番号など、個人を特定できる情報の入力を求めることはありません。
+    </p>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">2</span>
+      <h2>取得する情報と利用目的</h2>
+    </div>
+    <div class="table-wrap">
+      <table class="datatable">
+        <tr>
+          <th>情報の種類</th>
+          <td>登録した記録情報（作品名・公開年・ポスター画像の参照先・観た日・評価・感想・観た場所・添付した写真・見たいリストの内容等）</td>
+        </tr>
+        <tr>
+          <th>保存場所</th>
+          <td>お使いの端末内のみ（アプリのローカルデータベースおよびローカルストレージ）。当方のサーバーには送信・保存されません。アプリをアンインストールすると同時に削除されます。</td>
+        </tr>
+        <tr>
+          <th>利用目的</th>
+          <td>記録の一覧表示・検索・並べ替え、統計（月別の鑑賞本数、観た場所の割合、評価の分布等）の算出のため</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">3</span>
+      <h2>カメラ・写真へのアクセス</h2>
+    </div>
+    <p>
+      本アプリは、鑑賞記録に半券やパンフレットなどの写真を添付する機能のため、端末内の写真の選択、またはカメラでの撮影を行うことがあります。この機能は、ご自身で操作したときにのみ使われます。選択・撮影した写真は端末内にのみ保存され、当方や第三者のサーバーへアップロードされることはありません。
+    </p>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">4</span>
+      <h2>外部サービスとの通信（作品検索）</h2>
+    </div>
+    <p>
+      本アプリは作品検索機能の利用時、入力された検索キーワードを映画データベース「TMDB（The Movie Database）」へ送信し、作品名・公開年・あらすじ・ポスター画像などの情報を取得します。ポスター画像の表示時には、TMDBの画像配信サーバーへ通信が発生します。これらの通信により、IPアドレス等の一般的な通信情報がTMDBに届きます。検索キーワードに個人を特定する情報を含める必要はありません。この機能は、作品検索を行わない限り利用されません。
+    </p>
+    <div class="table-wrap">
+      <table class="datatable">
+        <tr>
+          <th>TMDB</th>
+          <td>作品情報・ポスター画像の取得に利用しています。<br />This product uses the TMDB API but is not endorsed or certified by TMDB.<br /><a href="https://www.themoviedb.org/privacy-policy" target="_blank" rel="noreferrer">TMDB プライバシーポリシー</a></td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">5</span>
+      <h2>広告配信（Google AdMob）</h2>
+    </div>
+    <p>
+      本アプリは広告表示のために Google AdMob を利用しています。AdMob は広告配信・パーソナライズのため、広告識別子（Advertising ID）等の情報を Google のポリシーに基づき取得する場合があります。詳細は下記をご参照ください。
+    </p>
+    <ul>
+      <li><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noreferrer">Google 広告ポリシー</a></li>
+      <li><a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Google プライバシーポリシー</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">6</span>
+      <h2>アプリ内課金</h2>
+    </div>
+    <p>
+      本アプリは広告非表示化の購入機能（非消費型・買い切り）を提供しています。決済処理は Google Play の課金システムを通じて行われ、クレジットカード番号等の決済情報を当方が取得・保存することはありません。購入状態はお使いの端末に保存されます。
+    </p>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">7</span>
+      <h2>第三者提供</h2>
+    </div>
+    <p>
+      当方は、法令に基づく場合を除き、取得した情報を本人の同意なく第三者に提供することはありません。なお「4. 外部サービスとの通信」「5. 広告配信」に記載のサービスへの情報送信は、各サービス提供者独自のポリシーに基づき行われます。
+    </p>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">8</span>
+      <h2>データの削除について</h2>
+    </div>
+    <p>
+      本アプリはサーバーにデータを送信・保存しないため、削除のお問い合わせは不要です。以下のいずれかの方法でいつでもご自身のデータを削除できます。
+    </p>
+    <ul>
+      <li>アプリ内の鑑賞記録や作品の画面から、その記録・作品を個別に削除する</li>
+      <li>アプリをアンインストールする（端末内のすべてのデータが完全に削除されます）</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">9</span>
+      <h2>ご利用対象年齢について</h2>
+    </div>
+    <p>
+      本アプリは特定の年齢層に限定したものではありませんが、13歳未満のお子様を主な対象としていません。お子様がご利用になる場合は、保護者の方の同意のもとでご利用ください。
+    </p>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">10</span>
+      <h2>ポリシーの変更</h2>
+    </div>
+    <p>
+      本ポリシーの内容は、法令の変更やサービス内容の変更に伴い、予告なく改定することがあります。重要な変更を行う場合は、アプリ内または本ページにて周知します。
+    </p>
+  </section>
+
+  <div class="contact-card">
+    <h2>お問い合わせ</h2>
+    <p>本ポリシーに関するご質問・ご意見は、下記メールアドレスまでご連絡ください。</p>
+    <p><a href="mailto:clockworkorange1019+cinelog@gmail.com">clockworkorange1019+cinelog@gmail.com</a></p>
+  </div>
+
+  <footer>
+    シネログ プライバシーポリシー ・ 制定日 2026年10月3日
+  </footer>
+</div>
+</body>
+</html>
