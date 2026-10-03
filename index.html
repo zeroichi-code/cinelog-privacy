@@ -327,13 +327,13 @@
       <h2>外部サービスとの通信（作品検索）</h2>
     </div>
     <p>
-      本アプリは作品検索機能の利用時、入力された検索キーワードを映画データベース「TMDB（The Movie Database）」へ送信し、作品名・公開年・あらすじ・ポスター画像などの情報を取得します。ポスター画像の表示時には、TMDBの画像配信サーバーへ通信が発生します。これらの通信により、IPアドレス等の一般的な通信情報がTMDBに届きます。検索キーワードに個人を特定する情報を含める必要はありません。この機能は、作品検索を行わない限り利用されません。
+      本アプリは作品検索機能の利用時、入力された検索キーワードを映画データベース「TheTVDB」へ送信し、作品名・公開年・あらすじ・ポスター画像・監督や出演者などの情報を取得します。検索結果から作品を選んだときは、監督・出演者を取得するために、その作品のIDも送信します。ポスター画像の表示時には、TheTVDBの画像配信サーバーへ通信が発生します。これらの通信により、IPアドレス等の一般的な通信情報がTheTVDBに届きます。検索キーワードに個人を特定する情報を含める必要はありません。この機能は、作品検索を行わない限り利用されません。
     </p>
     <div class="table-wrap">
       <table class="datatable">
         <tr>
-          <th>TMDB</th>
-          <td>作品情報・ポスター画像の取得に利用しています。<br />This product uses the TMDB API but is not endorsed or certified by TMDB.<br /><a href="https://www.themoviedb.org/privacy-policy" target="_blank" rel="noreferrer">TMDB プライバシーポリシー</a></td>
+          <th>TheTVDB</th>
+          <td>作品情報・ポスター画像の取得に利用しています。<br />Metadata provided by TheTVDB.<br /><a href="https://thetvdb.com/privacy-policy" target="_blank" rel="noreferrer">TheTVDB プライバシーポリシー</a></td>
         </tr>
       </table>
     </div>
